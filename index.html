@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Task 1</h2>
+    <p>Простые числа от 0 до 100:</p>
+    <p id="taskOne"></p>
+    <h2>Task 2</h2>
+    <p id="task"></p>
+    <p id="taskSum"></p>
+    <h2>Task 3</h2>
+    <form action="#" name='taskForm'>
+        <p>Введите наименование товара:</p>
+        <input type="text" name="itemName"> <br>
+        <p>Введите цену товара:</p>
+        <input type="number" name="itemPrice" id="itemPrice"> <br>
+        <br>
+        <input type="button" value="Добавить в корзину" onclick="add()">
+    </form>
+    <p>Ваша корзина:</p>
+    <table id="userCart" border="1px solid" width="400px">
+        <tr>
+            <th>Наименование</th>
+            <th>Цена</th>
+        </tr>
+    </table>
+    <p id="userSummaP"></p>
+    <h2>Task 4</h2>
+    <p id="taskFour"></p>
+    <h2>Task 5</h2>
+    <p>Вывод происходит в консоль.
+    </p>
+</body>
+
+</html>
