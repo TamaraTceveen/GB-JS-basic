@@ -1,43 +1,21 @@
 // Task 1
-
-var divId = document.getElementById('big');
-var imgOne = document.querySelectorAll("img")[0];
-var imgTwo = document.querySelectorAll("img")[1];
-var imgThree = document.querySelectorAll("img")[2];
-
-function resize(event){
-    switch(event.target){
-        case imgOne: divId.innerHTML = '<img src="img/big/winter1.jpg">';
-        console.log(event.target);
-        break;
-        case imgTwo: divId.innerHTML = '<img src="img/big/winter2.jpg">';
-        console.log(event.target);
-        break;
-        case imgThree: divId.innerHTML = '<img src="img/big/winter3.jpeg">';
-        
-        console.log(event.target);
-        break;
-    }
-}
-
 var images = document.querySelectorAll("img.images");
 for(var item of images){
    item.onclick = resize;
 }
 
-onerror=handleErr;
-var txt="";
 
-function handleErr(msg,url,l)
-{
-txt="There was an error on this page.\n\n";
-txt+="Error: " + msg + "\n";
-txt+="URL: " + url + "\n";
-txt+="Line: " + l + "\n\n";
-txt+="Click OK to continue.\n\n";
-alert(txt);
-return true;
+function resize(event){
+    var imageResized=document.createElement('img');
+    imageResized.src=event.target.src.replace('/small/','/big/');
+
+    document.getElementById('big').innerHTML=imageResized.outerHTML
+    imageResized.onerror=function(){alert('err')}
+
 }
+
+
+
 
 // onerror фото не найдено
 
@@ -56,7 +34,7 @@ function slider(direciton){
     console.log(click);
 }
 
-    
+
 
 
 // imgMain.innerHTML = '<img src="img/big/winter' + (i) + '.jpg">';
