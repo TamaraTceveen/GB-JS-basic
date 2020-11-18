@@ -45,43 +45,19 @@ return true;
 
 var imgMain = document.querySelector("div#insideSlider");
 var click = 0;
+var imgCount=2;
 
-function sliderRight(){
-    switch(click){
-        case 0:
-            click++;
-            imgMain.innerHTML = '<img src="img/big/winter' + (click) + '.jpg" class="fade">';
-            break;
-        case 1:
-            click++;
-            imgMain.innerHTML = '<img src="img/big/winter' + (click) + '.jpg" class="fade">';
-            break;
-        case 2:
-            click = 0;
-            imgMain.innerHTML = '<img src="img/big/winter' + (click) + '.jpg" class="fade">';
-            break;
-    }
+function slider(direciton){
+    if (direciton=='right'){click++}else{click--}
+    if (click>imgCount) click=0;
+    if (click<0) click=imgCount;
+    imgMain.innerHTML = '<img src="img/big/winter' + (click) + '.jpg" class="fade">';
+
     console.log(click);
 }
 
-function sliderLeft(){
-    switch(click){
-        case 0:
-            click = 2;
-            imgMain.innerHTML = '<img src="img/big/winter' + (click) + '.jpg" class="fade">';
-            break;
-        case 1:
-            click--;
-            imgMain.innerHTML = '<img src="img/big/winter' + (click) + '.jpg" class="fade">';
-            break;
-        case 2:
-            click--;
-            imgMain.innerHTML = '<img src="img/big/winter' + (click) + '.jpg" class="fade">';
-            break;
-    }
-    console.log(click+'left');
+    
 
-}
 
 // imgMain.innerHTML = '<img src="img/big/winter' + (i) + '.jpg">';
 
