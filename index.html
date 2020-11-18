@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4c151273f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Task 1</h1>
+    <div class="block">
+        <img src="img/small/winter1.jpg" onclick="resize(images);" class="images">
+        <img src="img/small/winter2.jpg" onclick="resize(images);" class="images">
+        <img src="img/small/winter3.jpeg" onclick="resize(images);" class="images">
+    </div>
+
+    <div id="big"></div>
+    <h1>Task 2</h1>
+    <div class="block">
+        <i class="fas fa-arrow-left" onclick="sliderLeft();"></i>
+        <div id="insideSlider">
+            <img src="img/big/winter0.jpg" class="fade" id="imgSlider">
+        </div>
+        <i class="fas fa-arrow-right" onclick="sliderRight();"></i>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cart">
+        <table id="userCart" border="1px solid" width="400px">
+            <tr>
+                <th>Наименование</th>
+                <th>Цена</th>
+                <th>Количество</th>
+            </tr>
+        </table>
+        <button onclick="countBasketPrice()">Посчитать корзину</button>
+        <p id="userSummaP"></p> 
+
+    </div>
+    <div class="items">
+        <form class="item" name="item1">
+            <p id="item1">Item 1</p>
+            <img src="../img/small/winter1.jpg">
+            <p>Price: <span id="item1Price">100</span> rub. </p>
+            <p>Введите количество:</p>
+            <input type="number" min="1" value="1" id="item1Count">
+            <input type="button" value="Add to Cart" onclick="addToCart(1)">
+        </form>
+        <form class="item" name="item">
+            <p id="item2">Item 2</p>
+            <img src="../img/small/winter2.jpg">
+            <p>Price: <span id="item2Price">200</span> rub. </p>
+            <p>Введите количество:</p>
+            <input type="number" min="1" value="1" id="item2Count">
+            <input type="button" value="Add to Cart" onclick="addToCart(2)">
+        </form>
+        <form class="item" name="item">
+            <p id="item3">Item 3</p>
+            <img src="../img/small/winter3.jpeg">
+            <p>Price: <span id="item3Price">450</span> rub. </p>
+            <p>Введите количество:</p>
+            <input type="number" min="1" value="1" id="item3Count">
+            <input type="button" value="Add to Cart" onclick="addToCart(3)">
+        </form>
+    </div>
+</body>
+</html>

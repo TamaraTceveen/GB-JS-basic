@@ -1,0 +1,15 @@
+.items {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=button] {
+    margin-top: 20px;
+}
